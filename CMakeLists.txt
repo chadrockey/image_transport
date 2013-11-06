@@ -13,6 +13,8 @@ find_package(catkin REQUIRED
 
 find_package(Boost REQUIRED)
 
+find_package(tinyxml REQUIRED)
+
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES ${PROJECT_NAME}
@@ -35,7 +37,7 @@ add_dependencies(${PROJECT_NAME} sensor_msgs_gencpp)
 target_link_libraries(${PROJECT_NAME}
   ${Boost_LIBRARIES}
   ${catkin_LIBRARIES}
-  tinyxml
+  ${tinyxml_LIBRARIES}
 )
 
 # Build libimage_transport_plugins                                      
